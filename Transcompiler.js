@@ -8,7 +8,7 @@ var assignops = (function () {
     //processes assignment statements
     assignops.assign = function (line) {
         var matches = /(.+) :> (.+)/.exec(line);
-        var tempstr = "var " + matches[1] + " = " + matches[2] + ";" + "\n";
+        var tempstr = "var " + matches[1] + " = " + matches[2] + ";";
         return tempstr;
     };
     return assignops;
@@ -37,8 +37,16 @@ var mathops = (function () {
     //deals with the power operator
     mathops.power = function (line) {
         var matches = /([0-9]+) \*\* ([0-9]+)/.exec(line);
-        var newstr = "Math.pow(" + matches[1] + ", " + matches[2] + ")\n";
+        var newstr = "Math.pow(" + matches[1] + ", " + matches[2] + ")";
         return line.replace(/([0-9]+) \*\* ([0-9]+)/, newstr);
+    };
+    //max operator
+    mathops.max = function (line) {
+        var matches = /m\^ ([0-9a-zA-Z, ]+)/.exec(line);
+        var newstr = "Math.max(" + matches[1] + ")";
+        return line.replace(/m\^ ([0-9a-zA-Z, ]+)/, newstr);
+    };
+    mathops.min = function (line) {
     };
     return mathops;
 })();

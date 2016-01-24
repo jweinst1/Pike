@@ -7,7 +7,7 @@ class assignops {
     //processes assignment statements
     public static assign(line:string) {
         var matches = /(.+) :> (.+)/.exec(line);
-        var tempstr = "var " + matches[1] + " = " + matches[2] + ";" +  "\n";
+        var tempstr = "var " + matches[1] + " = " + matches[2] + ";";
         return tempstr;
     }
 }
@@ -34,8 +34,18 @@ class mathops {
     //deals with the power operator
     public static power(line:string) {
         var matches = /([0-9]+) \*\* ([0-9]+)/.exec(line);
-        var newstr = "Math.pow(" + matches[1] + ", " + matches[2] + ")\n";
+        var newstr = "Math.pow(" + matches[1] + ", " + matches[2] + ")";
         return line.replace(/([0-9]+) \*\* ([0-9]+)/, newstr);
+    }
+    //max operator
+    public static max(line:string) {
+        var matches = /m\^ ([0-9a-zA-Z, ]+)/.exec(line);
+        var newstr = "Math.max(" + matches[1] + ")";
+        return line.replace(/m\^ ([0-9a-zA-Z, ]+)/, newstr);
+    }
+
+    public static min(line:string) {
+        
     }
 }
 

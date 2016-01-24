@@ -13,22 +13,34 @@ var assignops = (function () {
     };
     return assignops;
 })();
-var mentops = (function () {
-    function mentops() {
+var mathops = (function () {
+    function mathops() {
     }
     //processes a multiincrement statement
-    mentops.increment = function (line) {
+    mathops.increment = function (line) {
         var matches = /(.)(\++)/.exec(line);
-        var amount = matches[2].length;
+        var amount = matches[2].length - 1;
         return matches[1] + " += " + amount.toString() + ";";
     };
     //processes a multidecrement statement
-    mentops.decrement = function (line) {
-        var matches = /(.)(\--)/.exec(line);
-        var amount = matches[2].length;
+    mathops.decrement = function (line) {
+        var matches = /(.)(\--+)/.exec(line);
+        var amount = matches[2].length - 1;
         return matches[1] + " -= " + amount.toString() + ";";
     };
-    return mentops;
+    //multi power statement
+    mathops.powerment = function (line) {
+        var matches = /(.)(\*\*+)/.exec(line);
+        var amount = matches[2].length - 1;
+        return "Math.pow(" + matches[1] + ", " + amount.toString() + ")";
+    };
+    //deals with the power operator
+    mathops.power = function (line) {
+        var matches = /([0-9]+) \*\* ([0-9]+)/.exec(line);
+        var newstr = "Math.pow(" + matches[1] + ", " + matches[2] + ")\n";
+        return line.replace(/([0-9]+) \*\* ([0-9]+)/, newstr);
+    };
+    return mathops;
 })();
 var lists = (function () {
     function lists() {

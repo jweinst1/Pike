@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a521725c-efd0-47fd-a7d0-17e15cc2a6ff" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Transcompiler.js" afterPath="$PROJECT_DIR$/Transcompiler.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Transcompiler.js.map" afterPath="$PROJECT_DIR$/Transcompiler.js.map" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Transcompiler.ts" afterPath="$PROJECT_DIR$/Transcompiler.ts" />
@@ -74,8 +72,8 @@
       <file leaf-file-name="Transcompiler.ts" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Transcompiler.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.3220339">
-              <caret line="14" column="10" selection-start-line="14" selection-start-column="10" selection-end-line="14" selection-end-column="10" />
+            <state vertical-scroll-proportion="1.059322">
+              <caret line="27" column="27" selection-start-line="27" selection-start-column="27" selection-end-line="27" selection-end-column="27" />
               <folding>
                 <element signature="n#!!doc;n#assignops#0" expanded="false" />
               </folding>
@@ -376,8 +374,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Transcompiler.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3220339">
-          <caret line="14" column="10" selection-start-line="14" selection-start-column="10" selection-end-line="14" selection-end-column="10" />
+        <state vertical-scroll-proportion="1.059322">
+          <caret line="27" column="27" selection-start-line="27" selection-start-column="27" selection-end-line="27" selection-end-column="27" />
           <folding>
             <element signature="n#!!doc;n#assignops#0" expanded="false" />
           </folding>

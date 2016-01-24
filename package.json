@@ -1,0 +1,14 @@
+{
+  "name": "pike",
+  "version": "1.0.0",
+  "description": "A micro-programming language based heavily on operators that transcompiles to javascript",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "preferGlobal": true,
+  "bin": {
+    "piketc": "index.js"
+  },
+  "author": "Joshua Weinstein",
+  "license": "MIT"
+}

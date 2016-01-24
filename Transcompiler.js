@@ -46,9 +46,42 @@ var mathops = (function () {
         var newstr = "Math.max(" + matches[1] + ")";
         return line.replace(/m\^ ([0-9a-zA-Z, ]+)/, newstr);
     };
+    //min operator
     mathops.min = function (line) {
+        var matches = /m_ ([0-9a-zA-Z, ]+)/.exec(line);
+        var newstr = "Math.min(" + matches[1] + ")";
+        return line.replace(/m\^ ([0-9a-zA-Z, ]+)/, newstr);
+    };
+    //random number operator
+    mathops.randnum = function (line) {
+        var matches = /([0-9]+) r# ([0-9]+)/.exec(line);
+        var newstr = "Math.floor((Math.random() * " + matches[2] + ") + " + matches[1] + ")";
+        return line.replace(/([0-9]+) r# ([0-9]+)/, newstr);
+    };
+    //random number from 1 to input
+    mathops.randupto = function (line) {
+        var matches = /([0-9]+)\-r/.exec(line);
+        var newstr = "Math.floor((Math.random() * " + matches[1] + ") + 1)";
+        return line.replace(/([0-9]+)\-r/, newstr);
+    };
+    mathops.squareroot = function (line) {
+        var matches = /([0-9]+)\-s/.exec(line);
+        var newstr = "Math.sqrt(" + matches[1] + ")";
+        return line.replace(/([0-9]+)\-s/, newstr);
     };
     return mathops;
+})();
+//operators concerning strings
+var stringops = (function () {
+    function stringops() {
+    }
+    //gets last char of string
+    stringops.removelast = function (line) {
+        var matches = /(.+) ->l/.exec(line);
+        var newstr = matches[1] + ".slice(" + matches[1] + ".length-1)";
+        return line.replace(/(.+) ->l/, newstr);
+    };
+    return stringops;
 })();
 var lists = (function () {
     function lists() {

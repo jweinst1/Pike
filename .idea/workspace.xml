@@ -73,8 +73,8 @@
       <file leaf-file-name="Transcompiler.ts" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Transcompiler.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7033898">
-              <caret line="98" column="41" selection-start-line="98" selection-start-column="41" selection-end-line="98" selection-end-column="41" />
+            <state vertical-scroll-proportion="0.2542373">
+              <caret line="8" column="26" selection-start-line="8" selection-start-column="26" selection-end-line="8" selection-end-column="26" />
               <folding>
                 <element signature="n#!!doc;n#assignops#0" expanded="false" />
               </folding>
@@ -86,9 +86,9 @@
         <entry file="file://$PROJECT_DIR$/Transcompiler.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="116" column="41" selection-start-line="116" selection-start-column="41" selection-end-line="116" selection-end-column="41" />
+              <caret line="119" column="41" selection-start-line="119" selection-start-column="41" selection-end-line="119" selection-end-column="41" />
               <folding>
-                <marker date="1453666370000" expanded="true" signature="0:38" placeholder="/** Created by Josh on 1/23/16. ...*/" />
+                <marker date="1453668088000" expanded="true" signature="0:38" placeholder="/** Created by Josh on 1/23/16. ...*/" />
               </folding>
             </state>
           </provider>
@@ -408,17 +408,17 @@
     <entry file="file://$PROJECT_DIR$/Transcompiler.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="116" column="41" selection-start-line="116" selection-start-column="41" selection-end-line="116" selection-end-column="41" />
+          <caret line="119" column="41" selection-start-line="119" selection-start-column="41" selection-end-line="119" selection-end-column="41" />
           <folding>
-            <marker date="1453666370000" expanded="true" signature="0:38" placeholder="/** Created by Josh on 1/23/16. ...*/" />
+            <marker date="1453668088000" expanded="true" signature="0:38" placeholder="/** Created by Josh on 1/23/16. ...*/" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Transcompiler.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7033898">
-          <caret line="98" column="41" selection-start-line="98" selection-start-column="41" selection-end-line="98" selection-end-column="41" />
+        <state vertical-scroll-proportion="0.2542373">
+          <caret line="8" column="26" selection-start-line="8" selection-start-column="26" selection-end-line="8" selection-end-column="26" />
           <folding>
             <element signature="n#!!doc;n#assignops#0" expanded="false" />
           </folding>

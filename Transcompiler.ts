@@ -70,11 +70,37 @@ class mathops {
 }
 //operators concerning strings
 class stringops {
-    //gets last char of string
+    //remove lasts char of string
     public static removelast(line:string) {
         var matches = /(.+) ->l/.exec(line);
-        var newstr = matches[1] + ".slice(" + matches[1] + ".length-1)";
+        var newstr = matches[1] + ".slice(0, " + matches[1] + ".length-1)";
         return line.replace(/(.+) ->l/, newstr);
+    }
+    //gets last char of string
+    public static getlast(line:string) {
+        var matches = /l<- (.+)/.exec(line);
+        var newstr = matches[1] + ".slice(" + matches[1] + ".length-1)";
+        return line.replace(/l<- (.+)/, newstr);
+    }
+    //removes all instances of substr from a string
+    public static removeallsubstr(line:string) {
+        var matches = /(.+) !> (.+)/.exec(line);
+        var remover = matches[2].slice(1, matches[2].length-1);
+        remover = "/" + remover + "/g";
+        var newstr = matches[1] + ".replace(" + remover + ", \"\")";
+        return line.replace(/(.+) !> (.+)/, newstr)
+    }
+    //gets an array of all numbers in a string
+    public static getallnumbers(line:string) {
+        var matches = /(.+) ->#/.exec(line);
+        var newstr = matches[1] + ".match(/[0-9]+/g).map(Number)";
+        return line.replace(/(.+) ->#/, newstr);
+    }
+    //gets an array of all word sequences
+    public static getallwords(line:string) {
+        var matches = /(.+) ->A/.exec(line);
+        var newstr = matches[1] + ".match(/[a-zA-Z]+/g)";
+        return line.replace(/(.+) ->A/, newstr);
     }
 }
 

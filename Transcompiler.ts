@@ -12,16 +12,18 @@ class assignops {
     }
 }
 
-class mathops {
+class mentops {
     //processes a multiincrement statement
     public static increment(line:string) {
         var matches = /(.)(\++)/.exec(line);
         var amount = matches[2].length;
         return matches[1] + " += " + amount.toString() + ";";
     }
-
+    //processes a multidecrement statement
     public static decrement(line:string) {
-
+        var matches = /(.)(\--)/.exec(line);
+        var amount = matches[2].length;
+        return matches[1] + " -= " + amount.toString() + ";";
     }
 }
 

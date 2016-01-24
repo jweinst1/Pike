@@ -13,18 +13,22 @@ var assignops = (function () {
     };
     return assignops;
 })();
-var mathops = (function () {
-    function mathops() {
+var mentops = (function () {
+    function mentops() {
     }
     //processes a multiincrement statement
-    mathops.increment = function (line) {
+    mentops.increment = function (line) {
         var matches = /(.)(\++)/.exec(line);
         var amount = matches[2].length;
         return matches[1] + " += " + amount.toString() + ";";
     };
-    mathops.decrement = function (line) {
+    //processes a multidecrement statement
+    mentops.decrement = function (line) {
+        var matches = /(.)(\--)/.exec(line);
+        var amount = matches[2].length;
+        return matches[1] + " -= " + amount.toString() + ";";
     };
-    return mathops;
+    return mentops;
 })();
 var lists = (function () {
     function lists() {

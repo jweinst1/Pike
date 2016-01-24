@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a521725c-efd0-47fd-a7d0-17e15cc2a6ff" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Transcompiler.js" afterPath="$PROJECT_DIR$/Transcompiler.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Transcompiler.js.map" afterPath="$PROJECT_DIR$/Transcompiler.js.map" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Transcompiler.ts" afterPath="$PROJECT_DIR$/Transcompiler.ts" />
@@ -42,7 +41,7 @@
         <entry file="file://$PROJECT_DIR$/index.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="4" column="23" selection-start-line="4" selection-start-column="23" selection-end-line="4" selection-end-column="23" />
+              <caret line="1" column="37" selection-start-line="1" selection-start-column="37" selection-end-line="1" selection-end-column="37" />
               <folding />
             </state>
           </provider>
@@ -73,8 +72,8 @@
       <file leaf-file-name="Transcompiler.ts" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Transcompiler.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.2542373">
-              <caret line="8" column="26" selection-start-line="8" selection-start-column="26" selection-end-line="8" selection-end-column="26" />
+            <state vertical-scroll-proportion="0.7881356">
+              <caret line="124" column="8" selection-start-line="124" selection-start-column="8" selection-end-line="124" selection-end-column="8" />
               <folding>
                 <element signature="n#!!doc;n#assignops#0" expanded="false" />
               </folding>
@@ -86,9 +85,16 @@
         <entry file="file://$PROJECT_DIR$/Transcompiler.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="119" column="41" selection-start-line="119" selection-start-column="41" selection-end-line="119" selection-end-column="41" />
+              <caret line="126" column="2" selection-start-line="126" selection-start-column="2" selection-end-line="126" selection-end-column="2" />
               <folding>
-                <marker date="1453668088000" expanded="true" signature="0:38" placeholder="/** Created by Josh on 1/23/16. ...*/" />
+                <marker date="1453678510000" expanded="true" signature="0:38" placeholder="/** Created by Josh on 1/23/16. ...*/" />
+                <marker date="1453678510000" expanded="true" signature="2788:5033" placeholder="{...}" />
+                <marker date="1453678510000" expanded="true" signature="2815:2822" placeholder="{...}" />
+                <marker date="1453678510000" expanded="true" signature="2900:3113" placeholder="{...}" />
+                <marker date="1453678510000" expanded="true" signature="3186:3396" placeholder="{...}" />
+                <marker date="1453678510000" expanded="true" signature="3498:3830" placeholder="{...}" />
+                <marker date="1453678510000" expanded="true" signature="4217:4410" placeholder="{...}" />
+                <marker date="1453678510000" expanded="true" signature="4473:4716" placeholder="{...}" />
               </folding>
             </state>
           </provider>
@@ -137,8 +143,8 @@
       <list>
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/Objects.ts" />
-        <option value="$PROJECT_DIR$/index.js" />
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/index.js" />
         <option value="$PROJECT_DIR$/Transcompiler.js" />
         <option value="$PROJECT_DIR$/Transcompiler.ts" />
       </list>
@@ -379,14 +385,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="4" column="23" selection-start-line="4" selection-start-column="23" selection-end-line="4" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Objects.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -405,20 +403,35 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="1" column="37" selection-start-line="1" selection-start-column="37" selection-end-line="1" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Transcompiler.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="119" column="41" selection-start-line="119" selection-start-column="41" selection-end-line="119" selection-end-column="41" />
+          <caret line="126" column="2" selection-start-line="126" selection-start-column="2" selection-end-line="126" selection-end-column="2" />
           <folding>
-            <marker date="1453668088000" expanded="true" signature="0:38" placeholder="/** Created by Josh on 1/23/16. ...*/" />
+            <marker date="1453678510000" expanded="true" signature="0:38" placeholder="/** Created by Josh on 1/23/16. ...*/" />
+            <marker date="1453678510000" expanded="true" signature="2788:5033" placeholder="{...}" />
+            <marker date="1453678510000" expanded="true" signature="2815:2822" placeholder="{...}" />
+            <marker date="1453678510000" expanded="true" signature="2900:3113" placeholder="{...}" />
+            <marker date="1453678510000" expanded="true" signature="3186:3396" placeholder="{...}" />
+            <marker date="1453678510000" expanded="true" signature="3498:3830" placeholder="{...}" />
+            <marker date="1453678510000" expanded="true" signature="4217:4410" placeholder="{...}" />
+            <marker date="1453678510000" expanded="true" signature="4473:4716" placeholder="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Transcompiler.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2542373">
-          <caret line="8" column="26" selection-start-line="8" selection-start-column="26" selection-end-line="8" selection-end-column="26" />
+        <state vertical-scroll-proportion="0.7881356">
+          <caret line="124" column="8" selection-start-line="124" selection-start-column="8" selection-end-line="124" selection-end-column="8" />
           <folding>
             <element signature="n#!!doc;n#assignops#0" expanded="false" />
           </folding>

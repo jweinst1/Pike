@@ -15,7 +15,7 @@ class assignops {
 class mathops {
     //processes a multiincrement statement
     public static increment(line:string) {
-        var matches = / (.+?)(\++)/.exec(line);
+        var matches = / (.+?)(\+\++)/.exec(line);
         var amount = matches[2].length-1;
         return matches[1] + " += " + amount.toString() + ";";
     }
@@ -72,39 +72,57 @@ class mathops {
 class stringops {
     //remove lasts char of string
     public static removelast(line:string) {
-        var matches = / (.+?) ->l/.exec(line);
+        var matches = / ([^ \(\)]+|\"[^"]+\") ->l/.exec(line);
         var newstr = matches[1] + ".slice(0, " + matches[1] + ".length-1)";
-        return line.replace(/ (.+?) ->l/, newstr);
+        return line.replace(/ ([^ \(\)]+|\"[^"]+\") ->l/, newstr);
     }
     //gets last char of string
     public static getlast(line:string) {
-        var matches = /l<- (.+?) /.exec(line);
+        var matches = /l<- ([^ \(\)]+|\"[^"]+\") /.exec(line);
         var newstr = matches[1] + ".slice(" + matches[1] + ".length-1)";
-        return line.replace(/l<- (.+?) /, newstr);
+        return line.replace(/l<- ([^ \(\)]+|\"[^"]+\") /, newstr);
     }
     //removes all instances of substr from a string
     public static removeallsubstr(line:string) {
-        var matches = / (.+?) !> (.+?) /.exec(line);
+        var matches = /([^ \(\)]+|\"[^"]+\") !> (\"[^"]+\")/.exec(line);
         var remover = matches[2].slice(1, matches[2].length-1);
         remover = "/" + remover + "/g";
         var newstr = matches[1] + ".replace(" + remover + ", \"\")";
-        return line.replace(/ (.+?) !> (.+?) /, newstr)
+        return line.replace(/([^ \(\)]+|\"[^"]+\") !> (\"[^"]+\")/, newstr)
     }
     //gets an array of all numbers in a string
     public static getallnumbers(line:string) {
-        var matches = / (.+?) ->#/.exec(line);
+        var matches = / ([^ \(\)]+|\"[^"]+\") ->#/.exec(line);
         var newstr = matches[1] + ".match(/[0-9]+/g).map(Number)";
-        return line.replace(/ (.+?) ->#/, newstr);
+        return line.replace(/ ([^ \(\)]+|\"[^"]+\") ->#/, newstr);
     }
     //gets an array of all word sequences
     public static getallwords(line:string) {
-        var matches = / (.+?) ->A/.exec(line);
+        var matches = /([^ \(\)]+|\"[^"]+\") ->A/.exec(line);
         var newstr = matches[1] + ".match(/[a-zA-Z]+/g)";
-        return line.replace(/ (.+?) ->A/, newstr);
+        return line.replace(/([^ \(\)]+|\"[^"]+\") ->A/, newstr);
     }
-
+    //match operator
     public static matchop(line:string) {
-        var matches = / (.+?) =~ (.+?) /.exec(line);
+        var matches = /([^ \(\)]+|\"[^"]+\") :~ (\/[^\/]+\/|\"[^"]+\")/.exec(line);
+        var newstr = matches[1] + ".match(" + matches[2] + ")";
+        return line.replace(/([^ \(\)]+|\"[^"]+\") :~ (\/[^\/]+\/|\"[^"]+\")/, newstr);
+    }
+    //search operator
+    public static searchop(line:string) {
+        var matches = /([^ \(\)]+|\"[^"]+\") \?~ (\/[^\/]+\/|\"[^"]+\")/.exec(line);
+        var newstr = matches[1] + ".search(" + matches[2] + ")";
+        return line.replace(/([^ \(\)]+|\"[^"]+\") \?~ (\/[^\/]+\/|\"[^"]+\")/, newstr);
+    }
+    //regex test operator
+    public static testop(line:string) {
+        var matches = /([^ \(\)]+|\"[^"]+\") =~ (\/[^\/]+\/)/.exec(line);
+        var newstr = matches[2] + ".search(" + matches[1] + ")";
+        return line.replace(/([^ \(\)]+|\"[^"]+\") =~ (\/[^\/]+\/|\"[^"]+\")/, newstr);
+    }
+
+    public static findallop(line:string) {
+        
     }
 }
 
@@ -112,7 +130,5 @@ class stringops {
 
 
 
-class lists {
 
-}
 

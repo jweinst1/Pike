@@ -18,7 +18,7 @@ var mathops = (function () {
     }
     //processes a multiincrement statement
     mathops.increment = function (line) {
-        var matches = / (.+?)(\++)/.exec(line);
+        var matches = / (.+?)(\+\++)/.exec(line);
         var amount = matches[2].length - 1;
         return matches[1] + " += " + amount.toString() + ";";
     };
@@ -77,44 +77,56 @@ var stringops = (function () {
     }
     //remove lasts char of string
     stringops.removelast = function (line) {
-        var matches = / (.+?) ->l/.exec(line);
+        var matches = / ([^ \(\)]+|\"[^"]+\") ->l/.exec(line);
         var newstr = matches[1] + ".slice(0, " + matches[1] + ".length-1)";
-        return line.replace(/ (.+?) ->l/, newstr);
+        return line.replace(/ ([^ \(\)]+|\"[^"]+\") ->l/, newstr);
     };
     //gets last char of string
     stringops.getlast = function (line) {
-        var matches = /l<- (.+?) /.exec(line);
+        var matches = /l<- ([^ \(\)]+|\"[^"]+\") /.exec(line);
         var newstr = matches[1] + ".slice(" + matches[1] + ".length-1)";
-        return line.replace(/l<- (.+?) /, newstr);
+        return line.replace(/l<- ([^ \(\)]+|\"[^"]+\") /, newstr);
     };
     //removes all instances of substr from a string
     stringops.removeallsubstr = function (line) {
-        var matches = / (.+?) !> (.+?) /.exec(line);
+        var matches = /([^ \(\)]+|\"[^"]+\") !> (\"[^"]+\")/.exec(line);
         var remover = matches[2].slice(1, matches[2].length - 1);
         remover = "/" + remover + "/g";
         var newstr = matches[1] + ".replace(" + remover + ", \"\")";
-        return line.replace(/ (.+?) !> (.+?) /, newstr);
+        return line.replace(/([^ \(\)]+|\"[^"]+\") !> (\"[^"]+\")/, newstr);
     };
     //gets an array of all numbers in a string
     stringops.getallnumbers = function (line) {
-        var matches = / (.+?) ->#/.exec(line);
+        var matches = / ([^ \(\)]+|\"[^"]+\") ->#/.exec(line);
         var newstr = matches[1] + ".match(/[0-9]+/g).map(Number)";
-        return line.replace(/ (.+?) ->#/, newstr);
+        return line.replace(/ ([^ \(\)]+|\"[^"]+\") ->#/, newstr);
     };
     //gets an array of all word sequences
     stringops.getallwords = function (line) {
-        var matches = / (.+?) ->A/.exec(line);
+        var matches = /([^ \(\)]+|\"[^"]+\") ->A/.exec(line);
         var newstr = matches[1] + ".match(/[a-zA-Z]+/g)";
-        return line.replace(/ (.+?) ->A/, newstr);
+        return line.replace(/([^ \(\)]+|\"[^"]+\") ->A/, newstr);
     };
+    //match operator
     stringops.matchop = function (line) {
-        var matches = / (.+?) =~ (.+?) /.exec(line);
+        var matches = /([^ \(\)]+|\"[^"]+\") :~ (\/[^\/]+\/|\"[^"]+\")/.exec(line);
+        var newstr = matches[1] + ".match(" + matches[2] + ")";
+        return line.replace(/([^ \(\)]+|\"[^"]+\") :~ (\/[^\/]+\/|\"[^"]+\")/, newstr);
+    };
+    //search operator
+    stringops.searchop = function (line) {
+        var matches = /([^ \(\)]+|\"[^"]+\") \?~ (\/[^\/]+\/|\"[^"]+\")/.exec(line);
+        var newstr = matches[1] + ".search(" + matches[2] + ")";
+        return line.replace(/([^ \(\)]+|\"[^"]+\") \?~ (\/[^\/]+\/|\"[^"]+\")/, newstr);
+    };
+    //regex test operator
+    stringops.testop = function (line) {
+        var matches = /([^ \(\)]+|\"[^"]+\") =~ (\/[^\/]+\/)/.exec(line);
+        var newstr = matches[2] + ".search(" + matches[1] + ")";
+        return line.replace(/([^ \(\)]+|\"[^"]+\") =~ (\/[^\/]+\/|\"[^"]+\")/, newstr);
+    };
+    stringops.findallop = function (line) {
     };
     return stringops;
-})();
-var lists = (function () {
-    function lists() {
-    }
-    return lists;
 })();
 //# sourceMappingURL=Transcompiler.js.map

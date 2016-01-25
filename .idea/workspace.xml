@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a521725c-efd0-47fd-a7d0-17e15cc2a6ff" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Transcompiler.js" afterPath="$PROJECT_DIR$/Transcompiler.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Transcompiler.js.map" afterPath="$PROJECT_DIR$/Transcompiler.js.map" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Transcompiler.ts" afterPath="$PROJECT_DIR$/Transcompiler.ts" />
@@ -72,8 +73,8 @@
       <file leaf-file-name="Transcompiler.ts" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Transcompiler.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.4661017">
-              <caret line="13" column="43" selection-start-line="13" selection-start-column="43" selection-end-line="13" selection-end-column="43" />
+            <state vertical-scroll-proportion="0.7033898">
+              <caret line="186" column="28" selection-start-line="186" selection-start-column="28" selection-end-line="186" selection-end-column="28" />
               <folding>
                 <element signature="n#!!doc;n#assignops#0" expanded="false" />
               </folding>
@@ -85,17 +86,17 @@
         <entry file="file://$PROJECT_DIR$/Transcompiler.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="206" column="5" selection-start-line="206" selection-start-column="5" selection-end-line="206" selection-end-column="5" />
+              <caret line="218" column="5" selection-start-line="218" selection-start-column="5" selection-end-line="218" selection-end-column="5" />
               <folding>
-                <marker date="1453704117000" expanded="true" signature="0:38" placeholder="/** Created by Josh on 1/23/16. ...*/" />
-                <marker date="1453704117000" expanded="true" signature="6513:7908" placeholder="{...}" />
-                <marker date="1453704117000" expanded="true" signature="6539:6546" placeholder="{...}" />
-                <marker date="1453704117000" expanded="true" signature="6614:6796" placeholder="{...}" />
-                <marker date="1453704117000" expanded="true" signature="6871:7083" placeholder="{...}" />
-                <marker date="1453704117000" expanded="true" signature="7196:7417" placeholder="{...}" />
-                <marker date="1453704117000" expanded="true" signature="7496:7679" placeholder="{...}" />
-                <marker date="1453704117000" expanded="true" signature="7685:7792" placeholder="//..." />
-                <marker date="1453704117000" expanded="true" signature="7835:7908" placeholder="{...}" />
+                <marker date="1453705012000" expanded="true" signature="0:38" placeholder="/** Created by Josh on 1/23/16. ...*/" />
+                <marker date="1453705012000" expanded="true" signature="6513:8460" placeholder="{...}" />
+                <marker date="1453705012000" expanded="true" signature="6539:6546" placeholder="{...}" />
+                <marker date="1453705012000" expanded="true" signature="6614:6796" placeholder="{...}" />
+                <marker date="1453705012000" expanded="true" signature="6871:7083" placeholder="{...}" />
+                <marker date="1453705012000" expanded="true" signature="7196:7417" placeholder="{...}" />
+                <marker date="1453705012000" expanded="true" signature="7496:7679" placeholder="{...}" />
+                <marker date="1453705012000" expanded="true" signature="7685:8344" placeholder="//..." />
+                <marker date="1453705012000" expanded="true" signature="8387:8460" placeholder="{...}" />
               </folding>
             </state>
           </provider>
@@ -415,25 +416,25 @@
     <entry file="file://$PROJECT_DIR$/Transcompiler.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="206" column="5" selection-start-line="206" selection-start-column="5" selection-end-line="206" selection-end-column="5" />
+          <caret line="218" column="5" selection-start-line="218" selection-start-column="5" selection-end-line="218" selection-end-column="5" />
           <folding>
-            <marker date="1453704117000" expanded="true" signature="0:38" placeholder="/** Created by Josh on 1/23/16. ...*/" />
-            <marker date="1453704117000" expanded="true" signature="6513:7908" placeholder="{...}" />
-            <marker date="1453704117000" expanded="true" signature="6539:6546" placeholder="{...}" />
-            <marker date="1453704117000" expanded="true" signature="6614:6796" placeholder="{...}" />
-            <marker date="1453704117000" expanded="true" signature="6871:7083" placeholder="{...}" />
-            <marker date="1453704117000" expanded="true" signature="7196:7417" placeholder="{...}" />
-            <marker date="1453704117000" expanded="true" signature="7496:7679" placeholder="{...}" />
-            <marker date="1453704117000" expanded="true" signature="7685:7792" placeholder="//..." />
-            <marker date="1453704117000" expanded="true" signature="7835:7908" placeholder="{...}" />
+            <marker date="1453705012000" expanded="true" signature="0:38" placeholder="/** Created by Josh on 1/23/16. ...*/" />
+            <marker date="1453705012000" expanded="true" signature="6513:8460" placeholder="{...}" />
+            <marker date="1453705012000" expanded="true" signature="6539:6546" placeholder="{...}" />
+            <marker date="1453705012000" expanded="true" signature="6614:6796" placeholder="{...}" />
+            <marker date="1453705012000" expanded="true" signature="6871:7083" placeholder="{...}" />
+            <marker date="1453705012000" expanded="true" signature="7196:7417" placeholder="{...}" />
+            <marker date="1453705012000" expanded="true" signature="7496:7679" placeholder="{...}" />
+            <marker date="1453705012000" expanded="true" signature="7685:8344" placeholder="//..." />
+            <marker date="1453705012000" expanded="true" signature="8387:8460" placeholder="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Transcompiler.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4661017">
-          <caret line="13" column="43" selection-start-line="13" selection-start-column="43" selection-end-line="13" selection-end-column="43" />
+        <state vertical-scroll-proportion="0.7033898">
+          <caret line="186" column="28" selection-start-line="186" selection-start-column="28" selection-end-line="186" selection-end-column="28" />
           <folding>
             <element signature="n#!!doc;n#assignops#0" expanded="false" />
           </folding>

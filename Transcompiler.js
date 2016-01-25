@@ -185,6 +185,18 @@ var arrayops = (function () {
         var newstr = matches[1] + ".slice()";
         return line.replace(/(\[[^\[\]]+\]|[^ \(\)]+)-c/, newstr);
     };
+    //operator for array max
+    arrayops.arraymax = function (line) {
+        var matches = /m\^ (\[[^\[\]]+\]|[^ \(\)]+)/.exec(line);
+        var newstr = "Math.max.apply(null, " + matches[1] + ")";
+        return line.replace(/m\^ (\[[^\[\]]+\]|[^ \(\)]+)/, newstr);
+    };
+    //operator for array min
+    arrayops.arraymin = function (line) {
+        var matches = /m_ (\[[^\[\]]+\]|[^ \(\)]+)/.exec(line);
+        var newstr = "Math.min.apply(null, " + matches[1] + ")";
+        return line.replace(/m_ (\[[^\[\]]+\]|[^ \(\)]+)/, newstr);
+    };
     //(function(n){ var lst = []; for(i=0;i<n;i++) lst.push(i); return lst})(8)
     //gives a literal num range
     arrayops.numrangeop = function (line) {

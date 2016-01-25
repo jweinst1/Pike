@@ -178,6 +178,18 @@ class arrayops {
         var newstr = matches[1] + ".slice()";
         return line.replace(/(\[[^\[\]]+\]|[^ \(\)]+)-c/, newstr);
     }
+    //operator for array max
+    public static arraymax(line:string) {
+        var matches = /m\^ (\[[^\[\]]+\]|[^ \(\)]+)/.exec(line);
+        var newstr = "Math.max.apply(null, " + matches[1] + ")";
+        return line.replace(/m\^ (\[[^\[\]]+\]|[^ \(\)]+)/, newstr);
+    }
+    //operator for array min
+    public static arraymin(line:string) {
+        var matches = /m_ (\[[^\[\]]+\]|[^ \(\)]+)/.exec(line);
+        var newstr = "Math.min.apply(null, " + matches[1] + ")";
+        return line.replace(/m_ (\[[^\[\]]+\]|[^ \(\)]+)/, newstr);
+    }
     //(function(n){ var lst = []; for(i=0;i<n;i++) lst.push(i); return lst})(8)
     //gives a literal num range
     public static numrangeop(line:string) {

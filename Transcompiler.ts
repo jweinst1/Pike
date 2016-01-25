@@ -114,16 +114,44 @@ class stringops {
         var newstr = matches[1] + ".search(" + matches[2] + ")";
         return line.replace(/([^ \(\)]+|\"[^"]+\") \?~ (\/[^\/]+\/|\"[^"]+\")/, newstr);
     }
-    //regex test operator
+    //regex test operator regex is always on right side
     public static testop(line:string) {
         var matches = /([^ \(\)]+|\"[^"]+\") =~ (\/[^\/]+\/)/.exec(line);
         var newstr = matches[2] + ".search(" + matches[1] + ")";
         return line.replace(/([^ \(\)]+|\"[^"]+\") =~ (\/[^\/]+\/|\"[^"]+\")/, newstr);
     }
-
+    //returns an array with all matches in a string
     public static findallop(line:string) {
-        
+        var matches = /([^ \(\)]+|\"[^"]+\") ~> (\/[^\/]+\/)/.exec(line);
+        var newstr = matches[1] + ".match(" + matches[2] + "g)";
+        return line.replace(/([^ \(\)]+|\"[^"]+\") ~> (\/[^\/]+\/)/, newstr);
     }
+    //returns an array of a string split be a delimeter
+    public static splitop(line:string) {
+        var matches = /([^ \(\)]+|\"[^"]+\") s~ (\/[^\/]+\/|\"[^"]+\")/.exec(line);
+        var newstr = matches[1] + ".split(" + matches[2] + ")";
+        return line.replace(/([^ \(\)]+|\"[^"]+\") s~ (\/[^\/]+\/|\"[^"]+\")/, newstr);
+    }
+}
+
+class forops {
+
+    public static foreachop(line:string) {
+
+    }
+
+    public static formultiop(line:string) {
+
+    }
+}
+
+class arrayops {
+
+}
+
+
+class objops {
+    
 }
 
 

@@ -119,14 +119,43 @@ var stringops = (function () {
         var newstr = matches[1] + ".search(" + matches[2] + ")";
         return line.replace(/([^ \(\)]+|\"[^"]+\") \?~ (\/[^\/]+\/|\"[^"]+\")/, newstr);
     };
-    //regex test operator
+    //regex test operator regex is always on right side
     stringops.testop = function (line) {
         var matches = /([^ \(\)]+|\"[^"]+\") =~ (\/[^\/]+\/)/.exec(line);
         var newstr = matches[2] + ".search(" + matches[1] + ")";
         return line.replace(/([^ \(\)]+|\"[^"]+\") =~ (\/[^\/]+\/|\"[^"]+\")/, newstr);
     };
+    //returns an array with all matches in a string
     stringops.findallop = function (line) {
+        var matches = /([^ \(\)]+|\"[^"]+\") ~> (\/[^\/]+\/)/.exec(line);
+        var newstr = matches[1] + ".match(" + matches[2] + "g)";
+        return line.replace(/([^ \(\)]+|\"[^"]+\") ~> (\/[^\/]+\/)/, newstr);
+    };
+    //returns an array of a string split be a delimeter
+    stringops.splitop = function (line) {
+        var matches = /([^ \(\)]+|\"[^"]+\") s~ (\/[^\/]+\/|\"[^"]+\")/.exec(line);
+        var newstr = matches[1] + ".split(" + matches[2] + ")";
+        return line.replace(/([^ \(\)]+|\"[^"]+\") s~ (\/[^\/]+\/|\"[^"]+\")/, newstr);
     };
     return stringops;
+})();
+var forops = (function () {
+    function forops() {
+    }
+    forops.foreachop = function (line) {
+    };
+    forops.formultiop = function (line) {
+    };
+    return forops;
+})();
+var arrayops = (function () {
+    function arrayops() {
+    }
+    return arrayops;
+})();
+var objops = (function () {
+    function objops() {
+    }
+    return objops;
 })();
 //# sourceMappingURL=Transcompiler.js.map

@@ -11,4 +11,5 @@
   },
   "author": "Joshua Weinstein",
   "license": "MIT"
+  "keywords": ["javascript", "microlanguage", "operators", "minimal syntax", "transpiler"]
 }

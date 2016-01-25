@@ -33,7 +33,7 @@ var comparops = (function () {
     };
     //array in operator
     comparops.inop = function (line) {
-        var matches = /([^ \(\)]+) in (\[[^\[\]]+\]|[^ \(\)]+)/.exec(line);
+        var matches = /([^ \(\)]+) in-a (\[[^\[\]]+\]|[^ \(\)]+)/.exec(line);
         if (matches === null && typeof matches === "object")
             return line;
         var newline = "(function(" + matches[2] + ", " + matches[1] + ") { for(i=0;i<" + matches[2] + ".length;i++) if(" + matches[2] + "[i]==" + matches[1] + ") return true; return false;})(" + matches[2] + ", " + matches[1] + ")";
@@ -299,9 +299,43 @@ var Transcompiler = (function () {
     Transcompiler.transcompile = function (lines) {
         for (var i = 0; i < lines.length; i++) {
             if (linechecker.isstring(lines[i])) {
-                continue;
             }
+            lines[i] = assignops.assign(lines[i]);
+            lines[i] = mathops.max(lines[i]);
+            lines[i] = mathops.min(lines[i]);
+            lines[i] = mathops.increment(lines[i]);
+            lines[i] = mathops.decrement(lines[i]);
+            lines[i] = mathops.power(lines[i]);
+            lines[i] = mathops.powerment(lines[i]);
+            lines[i] = mathops.randnum(lines[i]);
+            lines[i] = mathops.randupto(lines[i]);
+            lines[i] = mathops.squareroot(lines[i]);
+            lines[i] = comparops.inop(lines[i]);
+            lines[i] = comparops.isop(lines[i]);
+            lines[i] = comparops.nullop(lines[i]);
+            lines[i] = stringops.testop(lines[i]);
+            lines[i] = stringops.splitop(lines[i]);
+            lines[i] = stringops.findallop(lines[i]);
+            lines[i] = stringops.getlast(lines[i]);
+            lines[i] = stringops.matchop(lines[i]);
+            lines[i] = stringops.getallwords(lines[i]);
+            lines[i] = stringops.removeallsubstr(lines[i]);
+            lines[i] = stringops.removelast(lines[i]);
+            lines[i] = stringops.searchop(lines[i]);
+            lines[i] = stringops.getallnumbers(lines[i]);
+            lines[i] = arrayops.arraymax(lines[i]);
+            lines[i] = arrayops.arraymin(lines[i]);
+            lines[i] = arrayops.copyop(lines[i]);
+            lines[i] = arrayops.lengthop(lines[i]);
+            lines[i] = arrayops.pullop(lines[i]);
+            lines[i] = arrayops.pushop(lines[i]);
+            lines[i] = arrayops.repeatlstop(lines[i]);
+            lines[i] = arrayops.numrangeop(lines[i]);
+            lines[i] = funcops.funcop(lines[i]);
+            lines[i] += "\n";
         }
+        var fstring = lines.join();
+        return fstring;
     };
     return Transcompiler;
 })();

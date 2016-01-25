@@ -1,8 +1,8 @@
-var fs = require("fs");
+var fs = require('fs');
 var userArgs = process.argv.slice(2);
 
 //reads string from file
-fs.readFile(userArgs[0], "utf-8", function (err, data) {
+fs.readFile(userArgs[0], 'utf-8', function (err, data) {
     if (err) throw err;
     data = data.split("\n");
     var readstring = Transcompiler.transcompile(data);

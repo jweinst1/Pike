@@ -13,6 +13,16 @@ var assignops = (function () {
     };
     return assignops;
 })();
+//class for integrated comparison operators
+var comparops = (function () {
+    function comparops() {
+    }
+    //enables an is operator
+    comparops.isop = function (line) {
+        return line.replace(/ is /, " == ");
+    };
+    return comparops;
+})();
 var mathops = (function () {
     function mathops() {
     }

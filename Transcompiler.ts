@@ -11,6 +11,14 @@ class assignops {
         return tempstr;
     }
 }
+//class for integrated comparison operators
+class comparops {
+
+    //enables an is operator
+    public static isop(line:string) {
+        return line.replace(/ is /, " == ");
+    }
+}
 
 class mathops {
     //processes a multiincrement statement

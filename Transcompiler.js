@@ -151,6 +151,24 @@ var forops = (function () {
 var arrayops = (function () {
     function arrayops() {
     }
+    //simulates the length
+    arrayops.lengthop = function (line) {
+        var matches = /(\[[^\[\]]+\]|[^ \(\)]+)-l/.exec(line);
+        var newstr = matches[1] + ".length";
+        return line.replace(/(\[[^\[\]]+\]|[^ \(\)]+)-l/, newstr);
+    };
+    //push operator implementation
+    arrayops.pushop = function (line) {
+        var matches = /(\[[^\[\]]+\]|[^ \(\)]+) <p (.+)/.exec(line);
+        var newstr = matches[1] + ".push(" + matches[2] + ")";
+        return line.replace(/(\[[^\[\]]+\]|[^ \(\)]+) <p (.+)/, newstr);
+    };
+    //allows the first occurence of an element in an array to be deleted
+    arrayops.pullop = function (line) {
+        var matches = /([^ \(\)]+) p> (.+)/.exec(line);
+        var newstr = "delete " + matches[1] + "[" + matches[1] + ".indexof(" + matches[2] + ")]";
+        return line.replace(/([^ \(\)]+) p> (.+)/, newstr);
+    };
     return arrayops;
 })();
 var objops = (function () {

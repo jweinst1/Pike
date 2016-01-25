@@ -164,8 +164,25 @@ class arrayops {
         var newstr = "delete " + matches[1] + "[" + matches[1] + ".indexof(" + matches[2] + ")]";
         return line.replace(/([^ \(\)]+) p> (.+)/, newstr);
     }
+    //operator for creating array copy
+    public static copyop(line:string) {
+        var matches = /(\[[^\[\]]+\]|[^ \(\)]+)-c/.exec(line);
+        var newstr = matches[1] + ".slice()";
+        return line.replace(/(\[[^\[\]]+\]|[^ \(\)]+)-c/, newstr);
+    }
+    //(function(n){ var lst = []; for(i=0;i<n;i++) lst.push(i); return lst})(8)
+    //gives a literal num range
+    public static numrangeop(line:string) {
+        var matches = /\[([0-9]+)\]#/.exec(line);
+        var numarr = "(function(n){ var lst = []; for(i=0;i<n;i++) lst.push(i); return lst})(" +matches[1]+ ")";
+        return line.replace(/\[([0-9]+)\]#/, numarr);
+    }
 
-    
+    public static repeatlstop(line:string) {
+        var matches = /\[([0-9]+), ([^ \(\)])\]R/.exec(line);
+        var reparr = "(function(n){ var lst = []; for(i=0;i<n;i++) lst.push(" +matches[2]+ "); return lst})(" +matches[1]+ ")";
+        return line.replace(/\[([0-9]+), ([^ \(\)])\]R/, reparr);
+    }
 }
 
 

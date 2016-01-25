@@ -73,8 +73,8 @@
       <file leaf-file-name="Transcompiler.ts" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Transcompiler.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.91525424">
-              <caret line="167" column="4" selection-start-line="167" selection-start-column="4" selection-end-line="167" selection-end-column="4" />
+            <state vertical-scroll-proportion="0.7457627">
+              <caret line="183" column="65" selection-start-line="183" selection-start-column="65" selection-end-line="183" selection-end-column="65" />
               <folding>
                 <element signature="n#!!doc;n#assignops#0" expanded="false" />
               </folding>
@@ -86,9 +86,16 @@
         <entry file="file://$PROJECT_DIR$/Transcompiler.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="178" column="2" selection-start-line="178" selection-start-column="2" selection-end-line="178" selection-end-column="2" />
+              <caret line="196" column="5" selection-start-line="196" selection-start-column="5" selection-end-line="196" selection-end-column="5" />
               <folding>
-                <marker date="1453692774000" expanded="true" signature="7240:7247" placeholder="{...}" />
+                <marker date="1453694877000" expanded="true" signature="6257:7652" placeholder="{...}" />
+                <marker date="1453694877000" expanded="true" signature="6283:6290" placeholder="{...}" />
+                <marker date="1453694877000" expanded="true" signature="6358:6540" placeholder="{...}" />
+                <marker date="1453694877000" expanded="true" signature="6615:6827" placeholder="{...}" />
+                <marker date="1453694877000" expanded="true" signature="6940:7161" placeholder="{...}" />
+                <marker date="1453694877000" expanded="true" signature="7240:7423" placeholder="{...}" />
+                <marker date="1453694877000" expanded="true" signature="7429:7536" placeholder="//..." />
+                <marker date="1453694877000" expanded="true" signature="7579:7652" placeholder="{...}" />
               </folding>
             </state>
           </provider>
@@ -408,17 +415,24 @@
     <entry file="file://$PROJECT_DIR$/Transcompiler.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="178" column="2" selection-start-line="178" selection-start-column="2" selection-end-line="178" selection-end-column="2" />
+          <caret line="196" column="5" selection-start-line="196" selection-start-column="5" selection-end-line="196" selection-end-column="5" />
           <folding>
-            <marker date="1453692774000" expanded="true" signature="7240:7247" placeholder="{...}" />
+            <marker date="1453694877000" expanded="true" signature="6257:7652" placeholder="{...}" />
+            <marker date="1453694877000" expanded="true" signature="6283:6290" placeholder="{...}" />
+            <marker date="1453694877000" expanded="true" signature="6358:6540" placeholder="{...}" />
+            <marker date="1453694877000" expanded="true" signature="6615:6827" placeholder="{...}" />
+            <marker date="1453694877000" expanded="true" signature="6940:7161" placeholder="{...}" />
+            <marker date="1453694877000" expanded="true" signature="7240:7423" placeholder="{...}" />
+            <marker date="1453694877000" expanded="true" signature="7429:7536" placeholder="//..." />
+            <marker date="1453694877000" expanded="true" signature="7579:7652" placeholder="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Transcompiler.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.91525424">
-          <caret line="167" column="4" selection-start-line="167" selection-start-column="4" selection-end-line="167" selection-end-column="4" />
+        <state vertical-scroll-proportion="0.7457627">
+          <caret line="183" column="65" selection-start-line="183" selection-start-column="65" selection-end-line="183" selection-end-column="65" />
           <folding>
             <element signature="n#!!doc;n#assignops#0" expanded="false" />
           </folding>

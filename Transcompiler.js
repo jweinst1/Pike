@@ -21,6 +21,18 @@ var comparops = (function () {
     comparops.isop = function (line) {
         return line.replace(/ is /, " == ");
     };
+    //fully featured null comparison operator
+    comparops.nullop = function (line) {
+        var matches = /([^ \(\)]+) =>n/.exec(line);
+        var newstr = matches[1] + " === null && typeof " + matches[1] + " === \"object\"";
+        return line.replace(/([^ \(\)]+) =>n/, newstr);
+    };
+    //array in operator
+    comparops.inop = function (line) {
+        var matches = /([^ \(\)]+) in (\[[^\[\]]+\]|[^ \(\)]+)/.exec(line);
+        var newline = "(function(" + matches[2] + ", " + matches[1] + ") { for(i=0;i<" + matches[2] + ".length;i++) if(" + matches[2] + "[i]==" + matches[1] + ") return true; return false;})(" + matches[2] + ", " + matches[1] + ")";
+        return line.replace(/([^ \(\)]+) in (\[[^\[\]]+\]|[^ \(\)]+)/, newline);
+    };
     return comparops;
 })();
 var mathops = (function () {
@@ -188,13 +200,13 @@ var arrayops = (function () {
     //operator for array max
     arrayops.arraymax = function (line) {
         var matches = /m\^ (\[[^\[\]]+\]|[^ \(\)]+)/.exec(line);
-        var newstr = "Math.max.apply(null, " + matches[1] + ")";
+        var newstr = "Math.max.apply(Math, " + matches[1] + ")";
         return line.replace(/m\^ (\[[^\[\]]+\]|[^ \(\)]+)/, newstr);
     };
     //operator for array min
     arrayops.arraymin = function (line) {
         var matches = /m_ (\[[^\[\]]+\]|[^ \(\)]+)/.exec(line);
-        var newstr = "Math.min.apply(null, " + matches[1] + ")";
+        var newstr = "Math.min.apply(Math, " + matches[1] + ")";
         return line.replace(/m_ (\[[^\[\]]+\]|[^ \(\)]+)/, newstr);
     };
     //(function(n){ var lst = []; for(i=0;i<n;i++) lst.push(i); return lst})(8)

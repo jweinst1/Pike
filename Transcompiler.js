@@ -7,9 +7,11 @@ var assignops = (function () {
     }
     //processes assignment statements
     assignops.assign = function (line) {
-        var matches = /(.+) :> (.+)/.exec(line);
+        var matches = /([^ \(\)]+) :> ([^ \(\)]+)/.exec(line);
+        if (matches === null && typeof matches === "object")
+            return line;
         var tempstr = "var " + matches[1] + " = " + matches[2] + ";";
-        return tempstr;
+        return line.replace(/([^ \(\)]+) :> ([^ \(\)]+)/, tempstr);
     };
     return assignops;
 })();
@@ -161,15 +163,6 @@ var stringops = (function () {
     };
     return stringops;
 })();
-var forops = (function () {
-    function forops() {
-    }
-    forops.foreachop = function (line) {
-    };
-    forops.formultiop = function (line) {
-    };
-    return forops;
-})();
 var arrayops = (function () {
     function arrayops() {
     }
@@ -223,9 +216,35 @@ var arrayops = (function () {
     };
     return arrayops;
 })();
-var objops = (function () {
-    function objops() {
+var funcops = (function () {
+    function funcops() {
     }
-    return objops;
+    //replaces the function keyword
+    funcops.funcop = function (line) {
+        return line.replace(/ ?f> ?/, "function");
+    };
+    return funcops;
+})();
+var linechecker = (function () {
+    function linechecker() {
+    }
+    //checks if an entire line is a string, if it is, eliminates it from processing
+    linechecker.isstring = function (line) {
+        return /^\"[^"]\"$/.test(line);
+    };
+    return linechecker;
+})();
+var Transcompiler = (function () {
+    function Transcompiler() {
+    }
+    //entry point to the transcompiler, top level function
+    Transcompiler.transcompile = function (lines) {
+        for (var i = 0; i < lines.length; i++) {
+            if (linechecker.isstring(lines[i])) {
+                continue;
+            }
+        }
+    };
+    return Transcompiler;
 })();
 //# sourceMappingURL=Transcompiler.js.map

@@ -6,9 +6,10 @@
 class assignops {
     //processes assignment statements
     public static assign(line:string) {
-        var matches = /(.+) :> (.+)/.exec(line);
+        var matches = /([^ \(\)]+) :> ([^ \(\)]+)/.exec(line);
+        if(matches === null && typeof matches === "object") return line;
         var tempstr = "var " + matches[1] + " = " + matches[2] + ";";
-        return tempstr;
+        return line.replace(/([^ \(\)]+) :> ([^ \(\)]+)/, tempstr);
     }
 }
 //class for integrated comparison operators
@@ -154,16 +155,6 @@ class stringops {
     }
 }
 
-class forops {
-
-    public static foreachop(line:string) {
-
-    }
-
-    public static formultiop(line:string) {
-
-    }
-}
 
 class arrayops {
     //simulates the length
@@ -217,10 +208,32 @@ class arrayops {
     }
 }
 
-
-class objops {
-
+class funcops {
+    //replaces the function keyword
+    public static funcop(line:string) {
+        return line.replace(/ ?f> ?/, "function");
+    }
 }
+
+class linechecker {
+    //checks if an entire line is a string, if it is, eliminates it from processing
+    public static isstring(line:string) {
+        return /^\"[^"]\"$/.test(line);
+    }
+}
+
+class Transcompiler {
+    //entry point to the transcompiler, top level function
+    public static transcompile(lines:string[]) {
+        for(var i=0;i<lines.length;i++) {
+            if(linechecker.isstring(lines[i])) {
+                continue;
+            }
+
+        }
+    }
+}
+
 
 
 

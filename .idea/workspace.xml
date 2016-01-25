@@ -5,7 +5,6 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Transcompiler.js" afterPath="$PROJECT_DIR$/Transcompiler.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Transcompiler.js.map" afterPath="$PROJECT_DIR$/Transcompiler.js.map" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Transcompiler.ts" afterPath="$PROJECT_DIR$/Transcompiler.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.js" afterPath="$PROJECT_DIR$/index.js" />
     </list>
     <ignored path="Pike.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -73,8 +72,8 @@
       <file leaf-file-name="Transcompiler.ts" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Transcompiler.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-8.194915">
-              <caret line="20" column="5" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
+            <state vertical-scroll-proportion="-0.38135594">
+              <caret line="233" column="72" selection-start-line="233" selection-start-column="72" selection-end-line="233" selection-end-column="72" />
               <folding>
                 <element signature="n#!!doc;n#assignops#0" expanded="false" />
               </folding>
@@ -86,7 +85,7 @@
         <entry file="file://$PROJECT_DIR$/Transcompiler.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="249" column="41" selection-start-line="249" selection-start-column="41" selection-end-line="249" selection-end-column="41" />
+              <caret line="307" column="41" selection-start-line="307" selection-start-column="41" selection-end-line="307" selection-end-column="41" />
               <folding />
             </state>
           </provider>
@@ -137,8 +136,8 @@
         <option value="$PROJECT_DIR$/Objects.ts" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/index.js" />
-        <option value="$PROJECT_DIR$/Transcompiler.ts" />
         <option value="$PROJECT_DIR$/Transcompiler.js" />
+        <option value="$PROJECT_DIR$/Transcompiler.ts" />
       </list>
     </option>
   </component>
@@ -406,15 +405,15 @@
     <entry file="file://$PROJECT_DIR$/Transcompiler.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="249" column="41" selection-start-line="249" selection-start-column="41" selection-end-line="249" selection-end-column="41" />
+          <caret line="307" column="41" selection-start-line="307" selection-start-column="41" selection-end-line="307" selection-end-column="41" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Transcompiler.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.194915">
-          <caret line="20" column="5" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
+        <state vertical-scroll-proportion="-0.38135594">
+          <caret line="233" column="72" selection-start-line="233" selection-start-column="72" selection-end-line="233" selection-end-column="72" />
           <folding>
             <element signature="n#!!doc;n#assignops#0" expanded="false" />
           </folding>

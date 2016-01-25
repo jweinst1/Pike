@@ -1,6 +1,6 @@
 {
   "name": "pike",
-  "version": "1.0.0",
+  "version": "0.5.0",
   "description": "A micro-programming language based heavily on operators that transcompiles to javascript",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -10,6 +10,10 @@
     "piketc": "index.js"
   },
   "author": "Joshua Weinstein",
-  "license": "MIT"
-  "keywords": ["javascript", "microlanguage", "operators", "minimal syntax", "transpiler"]
+  "license": "MIT",
+  "keywords": ["javascript", "microlanguage", "operators", "minimal syntax", "transpiler"],
+  "repository" :
+  { "type" : "github"
+  , "url" : "https://github.com/jweinst1/Pike.git"
+  }
 }

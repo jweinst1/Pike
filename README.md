@@ -6,6 +6,8 @@ Pike is a micro-programming language based heavily on the use of operators, and 
 For example, in Pike, instead of using `var x = 9`, you can use the short hand assignment operator `x :> 9`. Pike thrives on the philosophy of high level
 syntax and simplicity. Since it is transcompiled to Javascript, you can use Pike as a superset of javascript, allowing you to mix in what you want!
 
+NOTE: PikeJS uses significant whitespace, the space between operators and operands is not optional.
+
 ##Installation
 
 To install Pike, type into your commandline:
@@ -50,6 +52,10 @@ Works exactly the same as the increment operator but  deals with subtraction.
 ### Powerment number ****
 
 This operator adds a short hand way to increase a number by some power. `3**` is the same as squaring `3`, or `Math.pow(3, 2)`, or `i****` is the same as `Math.pow(i, 4)`.
+
+### Power Operator 2 ** 5
+
+The `**` operator, as in other languages raises a number by some power.
 
 ### Max Operator m^ 2, 4, 5, 7
 
